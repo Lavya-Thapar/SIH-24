@@ -33,14 +33,14 @@ body {
 }
 
 /* custom scrollbar styles */
-.event-calendar-scrollbar::-webkit-scrollbar{
+.custom-scrollbar::-webkit-scrollbar{
   @apply w-1 h-1
 }
 
-.event-calendar-scrollbar::-webkit-scrollbar-thumb{
+.custom-scrollbar::-webkit-scrollbar-thumb{
   @apply bg-gray-300/80 rounded-xl
 }
 
-.event-calendar-scrollbar::-webkit-scrollbar-thumb:hover{
+.custom-scrollbar::-webkit-scrollbar-thumb:hover{
   @apply bg-gray-300
 }

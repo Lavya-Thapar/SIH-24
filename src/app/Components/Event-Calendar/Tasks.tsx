@@ -30,7 +30,7 @@ const Task = ({ task, pxPerMin, offset }: Props) => {
   let taskHeight = Math.max(duration * pxPerMin, pxPerMin * 30);
   
   const borderStyle = borderStyles[task.type as TaskType] || borderStyles["default" as TaskType];
-  const container = ` bg-white absolute overflow-x-auto rounded-lg w-56 box-border p-2 shadow-md drop-shadow-md overflow-y-auto event-calendar-scrollbar ${borderStyle}`;
+  const container = ` bg-white absolute overflow-x-auto rounded-lg w-56 box-border p-2 shadow-md drop-shadow-md overflow-y-auto custom-scrollbar ${borderStyle}`;
   return (
     <div
       className={container}

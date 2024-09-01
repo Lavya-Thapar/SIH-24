@@ -16,7 +16,7 @@ const EventCalendar = ({height,timeLineEnd,timeLineStart}: Props) => {
     <>
       <div className="w-96 min-w-60 h-full min-h-72   text-black bg-white rounded-2xl p-4">
         <span className="font-semibold block my-2">Calendar</span>
-        <div className="h-full min-h-72  w-full  rounded-lg  overflow-y-scroll relative event-calendar-scrollbar">
+        <div className="h-full min-h-72  w-full  rounded-lg  overflow-y-scroll relative custom-scrollbar">
           <div className="w-full h-full absolute py-2 left-0">
             <Timeline
               height={height}
