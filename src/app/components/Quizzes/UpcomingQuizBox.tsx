@@ -2,7 +2,7 @@ import React from "react";
 import CalendarIcon from "./CalendarIcon";
 
 type Props = {
-  quizz: {
+  quiz: {
     id: string;
     title: string;
     date: string;
@@ -14,9 +14,9 @@ type Props = {
   };
 };
 
-const UpcomingQuizzBox = ({ quizz }: Props) => {
-  const startTime = new Date(quizz.startTime);
-  const endTime = new Date(quizz.endTime);
+const UpcomingQuizzBox = ({ quiz }: Props) => {
+  const startTime = new Date(quiz.startTime);
+  const endTime = new Date(quiz.endTime);
 
   const startTimeString = startTime.toLocaleTimeString("en-us", {
     hour: "numeric",
@@ -31,17 +31,17 @@ const UpcomingQuizzBox = ({ quizz }: Props) => {
     hour12: true,
   });
   return (
-    <div className="w-full  border-2 border-gray-400 border-dotted p-2 rounded-xl my-2">
+    <div className="w-full border-2 border-gray-400 border-dotted p-2 rounded-xl my-2 cursor-pointer">
       <div className="flex gap-4 items-center">
-        <CalendarIcon date={quizz.date}></CalendarIcon>
+        <CalendarIcon date={quiz.date}></CalendarIcon>
         <div className="flex-grow max-w-96 flex flex-col text-sm">
-          <div className="flex items-center  justify-between ">
-            <span className="block font-semibold  overflow-ellipsis text-xs ">{quizz.title}</span>
+          <div className="flex items-center justify-between ">
+            <span className="block font-semibold overflow-hidden text-ellipsis whitespace-nowrap max-w-[130px] text-xs hover:underline ">{quiz.title}</span>
             <span className="block text-xs min-w-max font-medium">
               {startTimeString}-{endTimeString}
             </span>
           </div>
-          <span className="text-xs ">{quizz.batch}</span>
+          <span className="text-xs ">{quiz.batch}</span>
         </div>
       </div>
     </div>

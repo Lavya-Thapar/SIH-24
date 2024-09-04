@@ -35,12 +35,8 @@ const Timeline = ({ height, pxPerMin, timeLineStart, timeLineEnd }: Props) => {
     const elems = [];
     for (let i = timeLineStart; i <= timeLineEnd; i++) {
       elems.push(
-        <div
-          key={i}
-          className={`border-gray-400 border-t-2 border-dotted relative`}
-          style={{ height: `${height}px` }}
-        >
-          <span className="block absolute bg-gray-300 px-2 rounded-lg text-xs -top-2">
+        <div key={i} className={`border-gray-400 border-t-2 border-dotted relative`} style={{ height: `${height}px` }}>
+          <span className="block absolute bg-gray-200 px-2 py-1 rounded-lg text-xs -top-3.5">
             {i < 12 ? `${i} AM` : i == 12 ? `${i} PM` : `${i - 12} PM`}
           </span>
         </div>
@@ -83,11 +79,7 @@ const Timeline = ({ height, pxPerMin, timeLineStart, timeLineEnd }: Props) => {
   return (
     <div className="relative">
       {elements}
-      <div
-        className="border-t-2 border-blue-600 absolute w-full z-10"
-        ref={timeRef}
-        style={{ top: `${position}px` }}
-      >
+      <div className="border-t-2 border-blue-600 absolute w-full z-10" ref={timeRef} style={{ top: `${position}px` }}>
         <span className="bg-blue-600 absolute rounded-full block w-2 h-2 -left-1 -top-1"></span>
       </div>
     </div>

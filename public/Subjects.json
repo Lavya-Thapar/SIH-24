@@ -1,0 +1,105 @@
+[
+    {
+      "name": "Malware Analysis",
+      "teacher": "Ms. Sharma",
+      "assignments": [
+        "Assignment 1 - Malware Analysis ",
+        "Assignment 2",
+        "Assignment 3"
+      ],
+      "quizzes": [
+        "Quiz 1 - Malware Analysis ",
+        "Quiz 2",
+        "Quiz 3"
+      ]
+    },
+    {
+      "name": "Network Security",
+      "teacher": "Mr. Sharma",
+      "quizzes": [
+        "Quiz 1 - Malware Analysis ",
+        "Quiz 2",
+        "Quiz 3"
+      ]
+    },
+    {
+      "name": "Database Management",
+      "teacher": "Dr. Singh",
+      "assignments": [
+        "Assignment X",
+        "Assignment Y",
+        "Assignment Z",
+        "Assignment W"
+      ]
+    },
+    {
+      "name": "Web Development",
+      "teacher": "Ms. Kapoor",
+      "assignments": [
+        "Assignment I",
+        "Assignment II"
+      ]
+    },
+    {
+      "name": "Operating Systems",
+      "teacher": "Mr. Agarwal",
+      "assignments": [
+        "Assignment 101",
+        "Assignment 102",
+        "Assignment 103"
+      ],
+      "quizzes": [
+        "Quiz 1 - Malware Analysis ",
+        "Quiz 2",
+        "Quiz 3"
+      ]
+    },
+    {
+      "name": "Software Engineering",
+      "teacher": "Dr. Verma",
+      "assignments": [
+        "Assignment 202",
+        "Assignment 203"
+      ]
+    },
+    {
+      "name": "Data Structures",
+      "teacher": "Ms. Mehta",
+      "assignments": [
+        "Assignment 301",
+        "Assignment 302",
+        "Assignment 303",
+        "Assignment 304"
+      ],
+      "quizzes": [
+        "Quiz 1 - Malware Analysis ",
+        "Quiz 2",
+        "Quiz 3"
+      ]
+    },
+    {
+      "name": "Algorithms",
+      "teacher": "Mr. Patel",
+      "assignments": [
+        "Assignment A1",
+        "Assignment A2"
+      ]
+    },
+    {
+      "name": "Computer Networks",
+      "teacher": "Ms. Reddy",
+      "assignments": [
+        "Assignment 400",
+        "Assignment 401"
+      ]
+    },
+    {
+      "name": "Artificial Intelligence",
+      "teacher": "Dr. Bose",
+      "assignments": [
+        "Assignment Alpha",
+        "Assignment Beta"
+      ]
+    }
+  ]
+  

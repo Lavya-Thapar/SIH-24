@@ -30,17 +30,16 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hover:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 }
 
-/* custom scrollbar styles */
-.custom-scrollbar::-webkit-scrollbar{
-  @apply w-1 h-1
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb{
-  @apply bg-gray-300/80 rounded-xl
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover{
-  @apply bg-gray-300
-}
