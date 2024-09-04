@@ -1,113 +1,222 @@
 import Image from "next/image";
+import Link from "next/link";
+
+const Navbar = () => {
+  return (
+    <nav className="z-10 fixed inset-x-0 h-24 flex items-center justify-between px-5 md:px-20 text-sm md:text-lg bg-dirty-white/80 backdrop-blur-sm">
+      <div className="flex items-center justify-center gap-5 text-black/75">
+        <div className="md:mr-10">Logo</div>
+        <Link
+          href="/"
+          className="group mt-0.5 hover:text-medium-blue transition duration-200"
+        >
+          Home
+          <span
+            aria-hidden="true"
+            className="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-medium-blue"
+          ></span>
+        </Link>
+        <Link
+          href="/about"
+          className="group mt-0.5 hover:text-medium-blue transition duration-200"
+        >
+          About
+          <span
+            aria-hidden="true"
+            className="block max-w-0 group-hover:max-w-full transition-all duration-200 h-0.5 bg-medium-blue"
+          ></span>
+        </Link>
+      </div>
+      <div className="flex items-center justify-center gap-5">
+        <Link
+          href="/login"
+          className="text-black/75 hover:text-medium-blue transition"
+        >
+          Login
+        </Link>
+        <Link
+          href="/sign-up"
+          className="px-5 py-2 border-dark-blue border-2 rounded-lg text-dark-blue hover:bg-dark-blue hover:text-white transition"
+        >
+          Sign Up
+        </Link>
+      </div>
+    </nav>
+  );
+};
+
+const Hero = () => {
+  return (
+    <div className="pt-10 px-10 md:px-0 min-h-[calc(100vh-6rem)] flex flex-col">
+      <div className="max-w-prose mx-auto">
+        <h1 className="font-extrabold text-4xl md:text-6xl text-center">
+          Learning is now more easy and affordable
+        </h1>
+        <p className="mt-5 text-center text-black/80 text-lg">
+          Convert your school into a{" "}
+          <span className="inline-block underline decoration-wavy decoration-dark-blue/80 decoration-[1.5px] underline-offset-4">
+            smart school
+          </span>
+          . Track your progress using{" "}
+          <span className="inline-block text-dark-blue font-semibold">
+            AI generated reports
+          </span>
+          .
+        </p>
+        <Link
+          href="/sign-up"
+          className="block w-fit mx-auto mt-5 px-5 py-3 bg-dark-blue rounded-lg text-white"
+        >
+          Get Started
+        </Link>
+      </div>
+      <Image
+        src="/landing-page/dashboard-pic.png"
+        width={1447}
+        height={922}
+        alt="dashboard-page image"
+        className="grow ring-2 ring-offset-4 ring-dark-blue aspect-video mx-auto rounded-lg mt-10 w-[90%] md:w-[80%] lg:w-[70%] bg-gray-400"
+      />
+    </div>
+  );
+};
+
+const About = () => {
+  return (
+    <div className="mt-10 px-10">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-10 w-[90%] md:w-[80%] lg:w-[70%] mx-auto">
+        <div className="bg-white/20 hover:bg-white border border-blue-200 aspect-square flex flex-col items-center justify-center gap-5 p-5 rounded-lg hover:shadow-lg hover:shadow-dark-gray transition hover:scale-105">
+          {/* <a href="https://www.flaticon.com/free-icons/webcam" title="webcam icons">Webcam icons created by Freepik - Flaticon</a> */}
+          <Image
+            src="/landing-page/webcam.png"
+            alt=""
+            width={64}
+            height={64}
+            className="size-10"
+          />
+          <p className="text-center text-sm text-black/80">
+            Computer vision assisted attendance
+          </p>
+        </div>
+        <div className="bg-white/20 hover:bg-white border border-blue-200 aspect-square flex flex-col items-center justify-center gap-5 p-5 rounded-lg hover:shadow-lg hover:shadow-dark-gray transition hover:scale-105">
+          {/* <a href="https://www.flaticon.com/free-icons/calendar" title="calendar icons">Calendar icons created by Freepik - Flaticon</a> */}
+          <Image
+            src="/landing-page/schedule.png"
+            alt=""
+            width={64}
+            height={64}
+            className="size-10"
+          />
+          <p className="text-center text-sm text-black/80">
+            Schedule for teachers and students
+          </p>
+        </div>
+        <div className="bg-white/20 hover:bg-white border border-blue-200 aspect-square flex flex-col items-center justify-center gap-5 p-5 rounded-lg hover:shadow-lg hover:shadow-dark-gray transition hover:scale-105">
+          {/* <a href="https://www.flaticon.com/free-icons/artificial-intelligence" title="artificial intelligence icons">Artificial intelligence icons created by Freepik - Flaticon</a> */}
+          <Image
+            src="/landing-page/ai.png"
+            alt=""
+            width={64}
+            height={64}
+            className="size-10"
+          />
+          <p className="text-center text-sm text-black/80">
+            AI generated report for improvements
+          </p>
+        </div>
+        <div className="bg-white/20 hover:bg-white border border-blue-200 aspect-square flex flex-col items-center justify-center gap-5 p-5 rounded-lg hover:shadow-lg hover:shadow-dark-gray transition hover:scale-105">
+          {/* <a href="https://www.flaticon.com/free-icons/quiz" title="quiz icons">Quiz icons created by Flat Icons - Flaticon</a> */}
+          <Image
+            src="/landing-page/quiz.png"
+            alt=""
+            width={64}
+            height={64}
+            className="size-10"
+          />
+          <p className="text-center text-sm text-black/80">
+            Realtime quizzes to revise and compete
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Tick = () => {
+  return (
+    <img
+      src="/landing-page/tick.svg"
+      aria-hidden="true"
+      className="size-3 inline-block mr-2"
+    />
+  );
+};
+
+const Description = () => {
+  return (
+    <div className="mt-10 flex justify-center gap-10 mx-auto w-fit px-10">
+      <div>
+        <h2 className="text-4xl font-semibold text-black/80 w-full md:max-w-[60vw]">
+          A complete online system for your school
+        </h2>
+        <p className="mt-3 text-black/70">
+          StudyMate supports many features while providing AI powered smart
+          classroom solutions
+        </p>
+        <ul className="mt-4 flex flex-col gap-2 text-black/70">
+          <li className="flex items-center">
+            <Tick />
+            Multiple batch support for teachers
+          </li>
+          <li className="flex items-center">
+            <Tick />
+            Event schedule to avoid conflicting events
+          </li>
+          <li className="flex items-center">
+            <Tick />
+            Student wise as well as batch wise metrics for easier evaluation
+          </li>
+          <li className="flex items-center">
+            <Tick />
+            Assignments tracker for avoiding deadlines
+          </li>
+          <li className="flex items-center">
+            <Tick />
+            Identification of weak topics per subject
+          </li>
+        </ul>
+      </div>
+      {/* // TODO: Replace this div with image on mobile */}
+      <div className="w-60 hidden md:block aspect-[9/12] mx-auto bg-gray-400 rounded-lg"></div>
+    </div>
+  );
+};
+
+const Footer = () => {
+  return (
+    <div className="mt-20 mx-auto w-fit rounded-xl bg-dark-blue flex items-center justify-center gap-10 md:px-5 flex-col md:flex-row py-5">
+      <p className="font-semibold text-white max-w-[50%] text-center">
+        Interested in bringing StudyMate to your school? Try it out now
+      </p>
+      <Link
+        href="sign-up"
+        className="rounded-2xl border-2 border-dirty-white px-5 py-2 text-lg text-dirty-white hover:bg-dirty-white hover:text-black/70 transition-colors"
+      >
+        Login / Sign up
+      </Link>
+    </div>
+  );
+};
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+    <main className="bg-dirty-white pb-10">
+      <Navbar />
+      <div aria-hidden="true" className="pt-24"></div>
+      <Hero />
+      <About />
+      <Description />
+      <Footer />
     </main>
   );
 }

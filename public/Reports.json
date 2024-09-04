@@ -1,0 +1,63 @@
+[
+    {
+      "name": "Jan",
+      "Average": 44,
+      "You": 35
+    },
+    {
+      "name": "Feb",
+      "Average": 36,
+      "You": 25
+    },
+    {
+      "name": "Mar",
+      "Average": 34,
+      "You": 100
+    },
+    {
+      "name": "Apr",
+      "Average": 45,
+      "You": 61
+    },
+    {
+      "name": "May",
+      "Average": 33,
+      "You": 54
+    },
+    {
+      "name": "Jun",
+      "Average": 56,
+      "You": 67
+    },
+    {
+      "name": "Jul",
+      "Average": 47,
+      "You": 59
+    },
+    {
+      "name": "Aug",
+      "Average": 47,
+      "You": 59
+    },
+    {
+      "name": "Sep",
+      "Average": 47,
+      "You": 59
+    },
+    {
+      "name": "Oct",
+      "Average": 47,
+      "You": 59
+    },
+    {
+      "name": "Nov",
+      "Average": 47,
+      "You": 59
+    },
+    {
+      "name": "Dec",
+      "Average": 47,
+      "You": 59
+    }
+  ]
+  
