@@ -11,7 +11,7 @@ const AssignmentTable = () => {
   const [assignments, setAssignments] = useState<Assignment[]>([]);
 
   useEffect(() => {
-    fetch("/assignments.json")
+    fetch("/Assignments.json")
       .then((response) => response.json())
       .then((data) => setAssignments(data));
   }, []);
