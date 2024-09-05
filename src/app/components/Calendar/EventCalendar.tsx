@@ -40,7 +40,7 @@ const EventCalendar = ({ height, timeLineEnd, timeLineStart }: Props) => {
   }, [timeLineStart, timeLineEnd, pxPerMin]);
 
   return (
-    <div className="w-96 min-w-60 text-black px-8 py-4">
+    <div className="w-full min-w-60 text-black px-8 py-4">
       <div
         ref={calendarRef}
         className="h-[30vh] w-full rounded-lg overflow-y-scroll relative no-scrollbar"

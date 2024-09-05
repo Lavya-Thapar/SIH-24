@@ -5,7 +5,15 @@ const Navbar = () => {
   return (
     <nav className="z-10 fixed inset-x-0 h-24 flex items-center justify-between px-5 md:px-20 text-sm md:text-lg bg-dirty-white/80 backdrop-blur-sm">
       <div className="flex items-center justify-center gap-5 text-black/75">
-        <div className="md:mr-10">Logo</div>
+        <div className="md:mr-10">
+          <Image
+            src={"/smart-classroom-logo.png"}
+            alt=""
+            width={624}
+            height={514}
+            className="w-24"
+          />
+        </div>
         <Link
           href="/"
           className="group mt-0.5 hover:text-medium-blue transition duration-200"
@@ -50,21 +58,19 @@ const Hero = () => {
     <div className="pt-10 px-10 md:px-0 min-h-[calc(100vh-6rem)] flex flex-col">
       <div className="max-w-prose mx-auto">
         <h1 className="font-extrabold text-4xl md:text-6xl text-center">
-          Learning is now more easy and affordable
+          Learning is now easier and innovative
         </h1>
         <p className="mt-5 text-center text-black/80 text-lg">
           Convert your school into a{" "}
-          <span className="inline-block underline decoration-wavy decoration-dark-blue/80 decoration-[1.5px] underline-offset-4">
-            smart school
-          </span>
-          . Track your progress using{" "}
+          <span className="inline-block">smart school</span>. Track your
+          progress using{" "}
           <span className="inline-block text-dark-blue font-semibold">
             AI generated reports
           </span>
           .
         </p>
         <Link
-          href="/login"
+          href="/subjects"
           className="block w-fit mx-auto mt-5 px-5 py-3 bg-dark-blue rounded-lg text-white"
         >
           Get Started

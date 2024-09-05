@@ -61,7 +61,7 @@ export default function Subjects() {
       <div className="flex-[1] p-8 pl-32 w-fit mx-auto">
         <div className="flex justify-between">
           <div className="flex font-normal italic text-[1.5rem] text-[#04002DD9]">
-            <Greeting />, User
+            <Greeting />, Harsh
           </div>
           <div className="flex gap-3">
             <div>
