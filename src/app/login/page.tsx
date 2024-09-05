@@ -1,14 +1,13 @@
-'use client'
-import React, { useState } from 'react'
-import Image from 'next/image'
-import toast, { Toaster } from 'react-hot-toast';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+"use client";
+import React, { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-export default function login() {
+export default function Login() {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
@@ -18,43 +17,42 @@ export default function login() {
     setPasswordVisible(!passwordVisible);
   };
 
-  const handleSubmit = (e:  React.FormEvent<HTMLFormElement>  ) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Validation checks
     if (!email) {
-      toast.error('Fill in the email field');
+      toast.error("Fill in the email field");
       return;
     }
 
     if (!password) {
-      toast.error('Fill in the password field');
+      toast.error("Fill in the password field");
       return;
     }
 
     if (!/\S+@\S+\.\S+/.test(email)) {
-      toast.error('Enter a valid email address');
+      toast.error("Enter a valid email address");
       return;
     }
 
     if (password.length < 6) {
-      toast.error('Password length must be at least 6 characters');
+      toast.error("Password length must be at least 6 characters");
       return;
     }
 
     // Perform login logic here
-    toast.success('Login successful');
+    toast.success("Login successful");
   };
 
   return (
     <section className="relative w-full h-[100vh] flex">
       <Toaster position="top-right" reverseOrder={false} />
 
-
       {/* Right side form section */}
       <div
         className="flex-1 flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: 'url(/wallpaper.jpg)' }}
+        style={{ backgroundImage: "url(/wallpaper.jpg)" }}
       >
         <div className="w-[400px] h-[500px] bg-[#000000]/30 backdrop-blur-lg shadow-lg rounded-2xl border-3 border-[#ffffff]/50 flex flex-col items-center justify-center">
           <button
@@ -102,7 +100,7 @@ export default function login() {
             Login
           </h2>
 
-          <form className="flex flex-col gap-4" onSubmit={ handleSubmit}>
+          <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
             <input
               className="p-2 mt-4 rounded-xl border"
               type="email"
@@ -114,7 +112,7 @@ export default function login() {
             <div className="relative">
               <input
                 className="p-2 rounded-xl border w-full"
-                type={passwordVisible ? 'text' : 'password'}
+                type={passwordVisible ? "text" : "password"}
                 name="password"
                 placeholder="Password"
                 value={password}
@@ -135,7 +133,7 @@ export default function login() {
               )}
             </div>
             <p className="text-left text-white mb-2">
-              <input type="checkbox" className="font-semibold" /> Remember Me{' '}
+              <input type="checkbox" className="font-semibold" /> Remember Me{" "}
             </p>
             <button
               type="submit"
@@ -152,7 +150,7 @@ export default function login() {
           </a>
 
           <p className="text-center text-white mt-4">
-            Don't have an account?{' '}
+            Don&apos;t have an account?{" "}
             <a
               href="#"
               className="text-[#ffffff] font-semibold hover:underline italic"
@@ -166,7 +164,6 @@ export default function login() {
             <p className="text-center text-sm font-bold">OR LOGIN WITH</p>
             <hr className="border-light-gray border-t-2" />
           </div>
-
 
           <div>
             <ul className="flex items-center justify-around space-x-5 mt-4">
@@ -236,6 +233,5 @@ export default function login() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

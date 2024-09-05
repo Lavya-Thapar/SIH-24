@@ -1,4 +1,3 @@
-import React from "react";
 import CalendarIcon from "./CalendarIcon";
 
 type Props = {
@@ -14,7 +13,7 @@ type Props = {
   };
 };
 
-const UpcomingQuizzBox = ({ quiz }: Props) => {
+const UpcomingQuizBox = ({ quiz }: Props) => {
   const startTime = new Date(quiz.startTime);
   const endTime = new Date(quiz.endTime);
 
@@ -31,12 +30,14 @@ const UpcomingQuizzBox = ({ quiz }: Props) => {
     hour12: true,
   });
   return (
-    <div className="w-full border-2 border-gray-400 border-dotted p-2 rounded-xl my-2 cursor-pointer">
+    <div className="w-full border-2 border-gray-400 border-dotted p-2 rounded-xl my-2 cursor-pointer hover:bg-gray-100 transition-colors">
       <div className="flex gap-4 items-center">
         <CalendarIcon date={quiz.date}></CalendarIcon>
         <div className="flex-grow max-w-96 flex flex-col text-sm">
           <div className="flex items-center justify-between ">
-            <span className="block font-semibold overflow-hidden text-ellipsis whitespace-nowrap max-w-[130px] text-xs hover:underline ">{quiz.title}</span>
+            <span className="block font-semibold overflow-hidden text-ellipsis whitespace-nowrap max-w-[130px] text-xs">
+              {quiz.title}
+            </span>
             <span className="block text-xs min-w-max font-medium">
               {startTimeString}-{endTimeString}
             </span>
@@ -48,4 +49,4 @@ const UpcomingQuizzBox = ({ quiz }: Props) => {
   );
 };
 
-export default UpcomingQuizzBox;
+export default UpcomingQuizBox;

@@ -1,37 +1,34 @@
-{
-    "assignments": [
-      {
-        "date": "12 APR",
-        "subject": "Linear Algebra"
-      },
-      {
-        "date": "10 MAR",
-        "subject": "3d Geometry"
-      },
-      {
-        "date": "15 APR",
-        "subject": "Determinants"
-      },
-      {
-        "date": "02 SEP",
-        "subject": "Derivatives"
-      },
-      {
-        "date": "12 APR",
-        "subject": "Linear Algebra"
-      },
-      {
-        "date": "10 MAR",
-        "subject": "3d Geometry"
-      },
-      {
-        "date": "15 APR",
-        "subject": "Determinants"
-      },
-      {
-        "date": "02 SEP",
-        "subject": "Derivatives"
-      }
-    ]
+[
+  {
+    "date": "12 APR",
+    "subject": "Linear Algebra"
+  },
+  {
+    "date": "10 MAR",
+    "subject": "3d Geometry"
+  },
+  {
+    "date": "15 APR",
+    "subject": "Determinants"
+  },
+  {
+    "date": "02 SEP",
+    "subject": "Derivatives"
+  },
+  {
+    "date": "12 APR",
+    "subject": "Linear Algebra"
+  },
+  {
+    "date": "10 MAR",
+    "subject": "3d Geometry"
+  },
+  {
+    "date": "15 APR",
+    "subject": "Determinants"
+  },
+  {
+    "date": "02 SEP",
+    "subject": "Derivatives"
   }
-  
+]
