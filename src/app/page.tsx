@@ -35,7 +35,7 @@ const Navbar = () => {
           Login
         </Link>
         <Link
-          href="/sign-up"
+          href="/login"
           className="px-5 py-2 border-dark-blue border-2 rounded-lg text-dark-blue hover:bg-dark-blue hover:text-white transition"
         >
           Sign Up
@@ -64,7 +64,7 @@ const Hero = () => {
           .
         </p>
         <Link
-          href="/sign-up"
+          href="/login"
           className="block w-fit mx-auto mt-5 px-5 py-3 bg-dark-blue rounded-lg text-white"
         >
           Get Started
@@ -72,8 +72,8 @@ const Hero = () => {
       </div>
       <Image
         src="/landing-page/dashboard-pic.png"
-        width={1447}
-        height={922}
+        width={1919}
+        height={1045}
         alt="dashboard-page image"
         className="grow ring-2 ring-offset-4 ring-dark-blue aspect-video mx-auto rounded-lg mt-10 w-[90%] md:w-[80%] lg:w-[70%] bg-gray-400"
       />
@@ -186,8 +186,13 @@ const Description = () => {
           </li>
         </ul>
       </div>
-      {/* // TODO: Replace this div with image on mobile */}
-      <div className="w-60 hidden md:block aspect-[9/12] mx-auto bg-gray-400 rounded-lg"></div>
+      <Image
+        src="/landing-page/dashboard-phone.png"
+        width={747}
+        height={947}
+        alt="dashboard-page image"
+        className="w-60 hidden md:block aspect-[9/12] mx-auto rounded-lg"
+      />
     </div>
   );
 };
@@ -199,7 +204,7 @@ const Footer = () => {
         Interested in bringing StudyMate to your school? Try it out now
       </p>
       <Link
-        href="sign-up"
+        href="login"
         className="rounded-2xl border-2 border-dirty-white px-5 py-2 text-lg text-dirty-white hover:bg-dirty-white hover:text-black/70 transition-colors"
       >
         Login / Sign up
@@ -210,7 +215,7 @@ const Footer = () => {
 
 export default function Home() {
   return (
-    <main className="bg-dirty-white pb-10">
+    <main className="bg-white pb-10">
       <Navbar />
       <div aria-hidden="true" className="pt-24"></div>
       <Hero />

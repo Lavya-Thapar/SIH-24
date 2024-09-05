@@ -1,4 +1,5 @@
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
+import Link from "next/link";
 
 interface props {
   name: string;
@@ -22,9 +23,12 @@ export default function SubjectBlock({
         style={{ backgroundColor: color }}
       >
         <div className="flex justify-between items-center">
-          <div className="text-[1.4rem] hover:underline overflow-hidden text-ellipsis whitespace-nowrap max-w-[80%]">
+          <Link
+            href={`/dashboard/${name}`}
+            className="block text-[1.4rem] hover:underline overflow-hidden text-ellipsis whitespace-nowrap max-w-[80%]"
+          >
             {name}
-          </div>
+          </Link>
           <div className="p-2 hover hover:cursor-pointer hover:rounded-[50%]">
             <MoreVertOutlinedIcon />
           </div>
